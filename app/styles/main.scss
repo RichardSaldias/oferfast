@@ -1,8 +1,7 @@
-$main-color: #fff;
-$back-color: #444;
+$main-color: #263238;
+$back-color: #fff;
 body{
 	color:$main-color;
-	padding: 20px;
 	background: $back-color;
 }
 .shadow{
@@ -11,7 +10,7 @@ body{
 	box-shadow:1px 1px 5px $back-color;
 }
 .logo{
-    max-width: 150px;
+    max-width: 70px;
     float:left;
     transition: 1000ms ease;
     &:hover{

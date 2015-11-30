@@ -1,7 +1,6 @@
 body {
-  color: #fff;
-  padding: 20px;
-  background: #444; }
+  color: #263238;
+  background: #fff; }
 
 .shadow {
   display: -webkit-flex;
@@ -9,10 +8,10 @@ body {
   display: flex;
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
-  box-shadow: 1px 1px 5px #444; }
+  box-shadow: 1px 1px 5px #fff; }
 
 .logo {
-  max-width: 150px;
+  max-width: 70px;
   float: left;
   transition: 1000ms ease; }
   .logo:hover {
