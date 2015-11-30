@@ -1,0 +1,29 @@
+{
+  "name": "angular-spa",
+  "version": "0.0.0",
+  "authors": [
+    "dfao-uc <dfavila@uc.cl>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.7",
+    "Materialize": "0.97.3",
+    "angular-route": "~1.4.7"
+  },
+  "overrides": {
+    "Materialize": {
+      "main": [
+        "dist/css/materialize.min.css",
+        "dist/js/materialize.min.js"
+      ]
+    }
+  }
+}
