@@ -1,5 +1,5 @@
 body {
-  color: #263238;
+  color: #5d4037;
   background: #fff; }
 
 .shadow {
@@ -17,3 +17,6 @@ body {
   .logo:hover {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); }
+
+.nav-wrapper {
+  background: #ffb300; }

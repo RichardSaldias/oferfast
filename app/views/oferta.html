@@ -1,0 +1,32 @@
+
+<div>
+	<div ng-if="actorOnly.actorId != undefined">
+		<div class="section blue-grey darken-4 z-depth-2" style="color:white;">
+			<h4><b>ACTOR:</b> {{actorOnly.firstName + " " + actorOnly.lastName}}</h4>
+		</div>
+		<div class="divider"></div>
+		<div class="section blue-grey z-depth-2" style="color:white">
+		    <p class="h4"><b>ID:</b> {{actorOnly.actorId}} | <b>Ultima Actualización:</b> {{actorOnly.lastUpdate}}</p>
+		</div>
+		<div class="divider"></div>
+		<br>
+		<a class="waves-effect waves-light btn blue-grey darken-4 z-depth-2" href="/#/misOfertas">Volver</a>
+	</div>
+
+	<div ng-if="actorOnly.actorId == undefined">
+		<div class="section blue-grey darken-4 z-depth-2" style="color:white;">
+			<h4><b>ACTOR NO ENCONTRADO</h4>
+		</div>
+		<div class="divider"></div>
+		<div class="section blue-grey z-depth-2" style="color:white">
+		    <p class="h4">Por favor ingrese un actor válido</p>
+		</div>
+		<div class="divider"></div>
+		<br>
+		<a class="waves-effect waves-light btn blue-grey darken-4 z-depth-2" href="/#/misOfertas">Volver</a>
+	</div>
+
+<br><br>
+
+	
+		    

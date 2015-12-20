@@ -1,5 +1,7 @@
-$main-color: #263238;
+$main-color: #5d4037;
 $back-color: #fff;
+$navbar-color: #ffb300;
+
 body{
 	color:$main-color;
 	background: $back-color;
@@ -16,4 +18,8 @@ body{
     &:hover{
         transform: rotate(360deg);
     }
+}
+
+.nav-wrapper{
+    background:$navbar-color;
 }

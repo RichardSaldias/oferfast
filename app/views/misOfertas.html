@@ -1,0 +1,57 @@
+<div >
+    <h1>Mis Ofertas</h1>
+    <div class="divider"></div>
+    <table class="centered striped bordered">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="a in actors">
+              <td>{{a.firstName}}</td>
+              <td>{{a.lastName}}</td>    
+              <td class="fixed-action-btn horizontal" style="position:relative;bottom:0px;    padding: 5px 15px 5px 60px;">
+                <a class="btn-floating btn-large  amber lighten-1">
+                  <i class="large material-icons">menu</i>
+                </a>
+                <ul style="right: 180px;">
+                  <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
+                  <li><a class="btn-floating blue"><i class="material-icons">mode_edit</i></a></li>
+                  <li><a href="/#/oferta/{{a.actorId}}" class="btn-floating green"><i class="material-icons">visibility</i></a></li>
+                </ul>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<div >
+    <h1>Mis Ofertas</h1>
+    <div class="divider"></div>
+    <table class="centered striped bordered responsive-table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="a in actors">
+              <td>{{a.firstName}}</td>
+              <td>{{a.lastName}}</td>    
+              <td><a class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">mode_edit</i></a></td>
+              <td><a class="btn-floating btn waves-effect waves-light red"><i class="material-icons">delete</i></a></td>
+              <td><a href="/#/actors/{{a.actorId}}" class="btn-floating btn waves-effect waves-light green"><i class="material-icons">visibility</i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
