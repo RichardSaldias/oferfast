@@ -8,3 +8,6 @@ angular.module('angularSpa')
             return $http.get(urlBase + actorId);
         };
     });
+
+
+

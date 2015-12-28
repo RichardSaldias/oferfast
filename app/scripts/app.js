@@ -9,7 +9,7 @@
             templateUrl: 'views/home.html',
             controller: 'HomeCtrl'
           })
-        .when('/misOfertas', {
+        .when('/ofertas', {
             templateUrl: 'views/misOfertas.html',
             controller: 'MisOfertasCtrl'
           })
@@ -22,8 +22,12 @@
             controller: 'LoginCtrl'
           })
         .when('/oferta/:id', {
-            templateUrl: 'views/oferta.html',
-            controller: 'MisOfertasCtrl'
+            templateUrl: 'views/oferta_show.html',
+            controller: 'OfertaShowCtrl',
+          })
+          .when('/oferta/edit/:id', {
+            templateUrl: 'views/oferta_edit.html',
+            controller: 'OfertaEditCtrl'
           })
         .otherwise({
             redirectTo: '/home'

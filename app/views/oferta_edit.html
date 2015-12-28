@@ -1,0 +1,44 @@
+<div>
+	<div ng-if="actorOnly.actorId != undefined">
+		<div class="row" style="margin-top:5%;margin-right:10%;margin-left:10%;">
+			<div class="input-field col s12">
+			    <input value="{{actorOnly.actorId}}" id="actorId" type="text" class="validate">
+			    <label class="active" for="actorId">ID</label>
+		    </div>
+		    <div class="input-field col s12">
+			    <input value="{{actorOnly.firstName}}" id="firstName" type="text" class="validate">
+			    <label class="active" for="firstName">Título</label>
+		    </div>
+		    <div class="input-field col s12">
+			    <input value="{{actorOnly.lastName}}" id="lastName" type="text" class="validate">
+			    <label class="active" for="lastName">Descripción</label>
+		    </div>
+		    <div class="input-field col s12">
+			    <input value="{{actorOnly.lastUpdate}}" id="lastUpdate" type="text" class="validate">
+			    <label class="active" for="lastUpdate">Fecha</label>
+		    </div>
+		    <div class="row col s12">
+			<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()" >Volver</div>		
+			<a class="waves-effect waves-light btn orange darken-4" type="submit">Guardar</a>
+		</div>
+	</div>
+
+		
+
+	<div ng-if="actorOnly.actorId == undefined">
+		<div class="section blue-grey darken-4 z-depth-2" style="color:white;">
+			<h4><b>OFERTA NO ENCONTRADO</h4>
+		</div>
+		<div class="divider"></div>
+		<div class="section blue-grey z-depth-2" style="color:white">
+		    <p class="h4">Por favor ingrese una oferta válida</p>
+		</div>
+		<div class="divider"></div>
+		<br>
+
+		<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()">Volver</div>
+	</div>
+<br><br>
+
+	
+		    

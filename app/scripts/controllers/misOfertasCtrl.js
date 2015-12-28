@@ -20,4 +20,8 @@ angular.module('angularSpa')
             });
         }
         getActor();
+
+        $scope.doTheBack = function() {
+        window.history.back();
+};
 });

@@ -1,0 +1,77 @@
+<div style="padding-top:20px;">
+	<div ng-if="actorOnly.actorId != undefined">
+	    <div class="row">
+	        <div class="col s12">
+	        	<ul class="collection">
+				    <li class="collection-item avatar" style="padding-left:90px;">
+				      <img src="images/perfil.png" alt="" class="circle" style="width:64px;height:64px">
+				      <span class="title">Oferta de plátanos!</span>
+				      <a href=""><p>@rei_ayanami</p></a>
+				      <h5 class="secondary-content" style="color:#ffb300">$15.000</h5>
+				    </li>
+  				</ul>
+	        </div> 
+	        <div class="col s12" style="padding:0 0rem;">
+				<div class=" col l7 s12">
+					<img src="images/platanos.jpg" style="width:100%;height:100%;border-radius:5px;"> 
+					<div class="col s2">
+						<h5 style="color:#4caf50"><i class="small material-icons" style="color:#4caf50">thumb_up</i> 3</h5>
+					</div>
+					<div class="col s2">
+						<h5 style="color:#f44336"><i class="small material-icons" style="color:#f44336">thumb_down</i> 3</h5>
+					</div>
+					<div class="col s3">
+						<h5 style="color:#ffb300"><i class="small material-icons" style="color:#ffb300">schedule</i>3 Dias</h5>
+					</div>
+					<div class="col s5 right-align" style="padding-top:14px;">
+						<a href="">
+							<i class="small material-icons" style="color:#ffb300">favorite</i>
+						</a>
+						<a href="">
+						<i class="small material-icons" style="color:#f44336">block</i>
+						</a>
+						<a href="">
+						<i class="small material-icons" style="color:#4caf50">add_box</i>
+						</a>
+					</div>
+					
+				</div>  
+				<div class="col l5 s12" >
+					<div class=" card-panel blue-grey lighten-4" style="width:100%;height:100%;margin:0rem 0rem 0rem 0rem;border-radius:5px;">
+
+						<img src="images/platanos.jpg" style="width:45%;height:45%;margin:0px 7px 2px 7px"> 
+						<img src="images/platanos.jpg" style="width:45%;height:45%;margin:0px 7px 2px 7px"> 
+						<img src="images/platanos.jpg" style="width:45%;height:45%;margin:0px 7px 2px 7px"> 
+						<img src="images/platanos.jpg" style="width:45%;height:45%;margin:0px 7px 2px 7px"> 
+						<img src="images/platanos.jpg" style="width:45%;height:45%;margin:0px 7px 2px 7px"> 
+					</div>  
+	        	</div> 
+ 			</div>
+ 			<div class="col s12">
+ 				<p style="text-align: justify">El nombre científico Musa × paradisiaca (o Musa paradisiaca) y los nombres comunes banano, banana, plátano, cambur, topocho, maduro y guineo hacen referencia a un gran número de plantas herbáceas del género Musa, tanto híbridos obtenidos horticulturalmente a partir de las especies silvestres Musa acuminata y Musa balbisiana como cultivares genéticamente puros de estas especies. Clasificado originalmente por Carlos Linneo como Musa paradisiaca en 1753, la especie tipo del género Musa, estudios posteriores han llevado a la conclusión de que la compleja taxonomía del género incluye numerosos híbridos, de variada composición genética, y se ha desarrollado un sistema estrictamente sui géneris de clasificación para dar cuenta de esta variación. Sin embargo, de acuerdo con las reglas del Código Internacional de Nomenclatura Botánica, el nombre linneano cuenta con prioridad, y sigue siendo usado —tanto en su forma original como en la modificada Musa × paradisiaca, que indica que se trata de un híbrido— para designar genéricamente a estas variedades. </p>
+
+ 			</div>
+	        <div class="col s12" style="padding-top:10px;">
+				<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()">Volver</div>
+			</div>
+		</div>
+
+		<div ng-if="actorOnly.actorId == undefined">
+			<div class="section blue-grey darken-4 z-depth-2" style="color:white;">
+				<h4><b>ACTOR NO ENCONTRADO</h4>
+			</div>
+			<div class="divider"></div>
+			<div class="section blue-grey z-depth-2" style="color:white">
+			    <p class="h4">Por favor ingrese un actor válido</p>
+			</div>
+			<div class="divider"></div>
+			<br>
+
+			<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()">Volver</div>
+		</div>
+<br><br>
+
+	{{actorOnly.actorId}}
+{{actorOnly.lastUpdate}}
+		    {{actorOnly.firstName}}
+{{actorOnly.lastName}}
