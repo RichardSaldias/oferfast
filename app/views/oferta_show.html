@@ -1,13 +1,13 @@
 <div style="padding-top:20px;">
-	<div ng-if="actorOnly.actorId != undefined">
+	<div ng-if="ofertaOnly.ofertaId != undefined">
 	    <div class="row">
 	        <div class="col s12">
 	        	<ul class="collection">
 				    <li class="collection-item avatar" style="padding-left:90px;">
-				      <img src="images/perfil.png" alt="" class="circle" style="width:64px;height:64px">
-				      <span class="title">Oferta de plátanos!</span>
-				      <a href=""><p>@rei_ayanami</p></a>
-				      <h5 class="secondary-content" style="color:#ffb300">$15.000</h5>
+				      <img src="{{ofertaOnly.usuario.urlProfilePicture}}" alt="" class="circle" style="width:64px;height:64px">
+				      <span class="title">{{ofertaOnly.title}}</span>
+				      <a href=""><p>@{{ofertaOnly.usuario.username}}</p></a>
+				      <h5 class="secondary-content" style="color:#ffb300">${{ofertaOnly.price}}</h5>
 				    </li>
   				</ul>
 	        </div> 
@@ -48,15 +48,16 @@
 	        	</div> 
  			</div>
  			<div class="col s12">
- 				<p style="text-align: justify">El nombre científico Musa × paradisiaca (o Musa paradisiaca) y los nombres comunes banano, banana, plátano, cambur, topocho, maduro y guineo hacen referencia a un gran número de plantas herbáceas del género Musa, tanto híbridos obtenidos horticulturalmente a partir de las especies silvestres Musa acuminata y Musa balbisiana como cultivares genéticamente puros de estas especies. Clasificado originalmente por Carlos Linneo como Musa paradisiaca en 1753, la especie tipo del género Musa, estudios posteriores han llevado a la conclusión de que la compleja taxonomía del género incluye numerosos híbridos, de variada composición genética, y se ha desarrollado un sistema estrictamente sui géneris de clasificación para dar cuenta de esta variación. Sin embargo, de acuerdo con las reglas del Código Internacional de Nomenclatura Botánica, el nombre linneano cuenta con prioridad, y sigue siendo usado —tanto en su forma original como en la modificada Musa × paradisiaca, que indica que se trata de un híbrido— para designar genéricamente a estas variedades. </p>
+ 				<p style="text-align: justify">{{ofertaOnly.description}}. <a href="">#Platano</a><a href=""> #Pajaritos</a><a href=""> #Maipú</a><a href=""> #Fruta</a></p>
+
 
  			</div>
 	        <div class="col s12" style="padding-top:10px;">
 				<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()">Volver</div>
 			</div>
 		</div>
-
-		<div ng-if="actorOnly.actorId == undefined">
+	</div>
+		<div ng-if="ofertaOnly.ofertaId == undefined">
 			<div class="section blue-grey darken-4 z-depth-2" style="color:white;">
 				<h4><b>ACTOR NO ENCONTRADO</h4>
 			</div>
@@ -71,7 +72,3 @@
 		</div>
 <br><br>
 
-	{{actorOnly.actorId}}
-{{actorOnly.lastUpdate}}
-		    {{actorOnly.firstName}}
-{{actorOnly.lastName}}

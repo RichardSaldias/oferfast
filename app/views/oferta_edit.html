@@ -1,31 +1,27 @@
 <div>
-	<div ng-if="actorOnly.actorId != undefined">
+	<div ng-if="ofertaOnly.ofertaId == undefined">
 		<div class="row" style="margin-top:5%;margin-right:10%;margin-left:10%;">
-			<div class="input-field col s12">
-			    <input value="{{actorOnly.actorId}}" id="actorId" type="text" class="validate">
-			    <label class="active" for="actorId">ID</label>
-		    </div>
 		    <div class="input-field col s12">
-			    <input value="{{actorOnly.firstName}}" id="firstName" type="text" class="validate">
+			    <input value="Oferta plátanos!{{ofertaOnly.title}}" id="firstName" type="text" class="validate">
 			    <label class="active" for="firstName">Título</label>
 		    </div>
 		    <div class="input-field col s12">
-			    <input value="{{actorOnly.lastName}}" id="lastName" type="text" class="validate">
-			    <label class="active" for="lastName">Descripción</label>
+		    	<textarea id="textarea1" class="materialize-textarea" >Estaba caminando por la Av. Pajaritos cuando encontre un local escondido donde venden plátanos a precio muy accesible y de muy buena calidad!, esta escondido por una esquina visitenlo!.{{ofertaOnly.description}}</textarea>
+                <label for="textarea1">Descripción</label>
 		    </div>
 		    <div class="input-field col s12">
-			    <input value="{{actorOnly.lastUpdate}}" id="lastUpdate" type="text" class="validate">
-			    <label class="active" for="lastUpdate">Fecha</label>
+			    <input value="400{{ofertaOnly.price}}" id="lastName" type="text" class="validate">
+			    <label class="active" for="lastName">Precio</label>
 		    </div>
 		    <div class="row col s12">
 			<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()" >Volver</div>		
-			<a class="waves-effect waves-light btn orange darken-4" type="submit">Guardar</a>
+			<a class="waves-effect waves-light btn orange darken-4" ng-click="doTheBack()"">Guardar</a>
 		</div>
 	</div>
-
+</div>
 		
 
-	<div ng-if="actorOnly.actorId == undefined">
+	<div ng-if="ofertaOnly.ofertaId != undefined">
 		<div class="section blue-grey darken-4 z-depth-2" style="color:white;">
 			<h4><b>OFERTA NO ENCONTRADO</h4>
 		</div>
@@ -39,6 +35,6 @@
 		<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()">Volver</div>
 	</div>
 <br><br>
-
+<div>
 	
 		    

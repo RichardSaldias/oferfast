@@ -1,14 +1,13 @@
 angular.module('angularSpa')
-    .controller('OfertaShowCtrl', function($scope, actorsService, $routeParams){
-        $scope.actors = [];
-        function getActor(){
-            actorsService.getActor($routeParams.id)
+    .controller('OfertaShowCtrl', function($scope, ofertasService, $routeParams){
+        function getOferta(){
+            ofertasService.getOferta($routeParams.id)
             .success(function(data){
-                $scope.actorOnly = data;
-                console.log( $scope.actorOnly.actorId);
+                $scope.ofertaOnly = data;
+                console.log( $scope.ofertaOnly.ofertaId);
             });
         }
-        getActor();
+        getOferta();
 
         $scope.doTheBack = function() {
         window.history.back();

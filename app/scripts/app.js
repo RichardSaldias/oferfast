@@ -1,8 +1,6 @@
 (function(){
 
-    angular.module('angularSpa', [
-    'ngRoute'
-    ])
+    angular.module('angularSpa', ['ngRoute','ngCookies','ngResource'])
     .config(function($routeProvider){
         $routeProvider
         .when('/home', {
@@ -17,7 +15,7 @@
             templateUrl: 'views/buscarOfertaAvanzada.html',
             controller: 'BuscarOfertaAvanzadaCtrl'
           })
-        .when('/login', {
+        .when('/', {
             templateUrl: 'views/login.html',
             controller: 'LoginCtrl'
           })
@@ -30,9 +28,10 @@
             controller: 'OfertaEditCtrl'
           })
         .otherwise({
-            redirectTo: '/home'
+            redirectTo: '/'
           });
     });
 
 })();
+
 
