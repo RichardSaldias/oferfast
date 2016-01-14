@@ -1,0 +1,57 @@
+
+<div style="padding-top:100px;">
+	<div class="card-panel blue-grey lighten-5">
+	    <div class="row center-align">
+	        <div class="col s12 center-align">
+	        	<img ng-if="session.urlProfilePicture == 'no hay foto'" class="circle z-depth-2" src="/images/perfil.png" alt="" style="width:150px;height:150px;margin-top:-100px">
+	        	<img ng-if="session.urlProfilePicture != 'no hay foto'" class="circle z-depth-2" src="{{session.urlProfilePicture}}" alt="" style="width:150px;height:150px;margin-top:-100px">
+	        	<h4>@{{session.username}}</h4>
+	        </div> 
+	        <div class="col s6 offset-s6 center-align" style="margin-left:25%">
+		        <div class="col s4">
+					<h5 style="color:#ffc107"><i class="small material-icons" style="color:#ffc107">local_offer</i> 43</h5>
+				</div>
+		        <div class="col s4">
+					<h5 style="color:#03a9f4"><i class="small material-icons" style="color:#03a9f4">person</i> 21</h5>
+				</div>
+		        <div class="col s4">
+					<h5 style="color:#4caf50"><i class="small material-icons" style="color:#4caf50">group</i> 46</h5>
+				</div>
+		</div>
+		<div class="col s6 offset-s6 center-align" style="margin-left:25%;margin-top:-10px">
+		        <div class="col s4">
+					<h6 style="color:#ffc107">Ofertas</h6>
+				</div>
+		        <div class="col s4">
+					<h6 style="color:#03a9f4">Seguidos</h6>
+				</div>
+		        <div class="col s4">
+					<h6 style="color:#4caf50">Seguidores</h6>
+				</div>
+		</div>
+<div class="col s12" >
+	<br> 
+	  <div class="divider"></div>
+	         <br>
+			<h4 class="thin">Actualizar datos</h4>
+		</div>
+			<div class="col s12" style="margin-right:10%;margin-left:17%;">
+
+	          
+	            <div class="input-field col s8">
+	                <input ng-model="session.email" id="mail" type="email" class="validate" placeholder="correo@mail.com" value="{{session.email}}">
+	                <label class="active" for="mail">Correo:</label>
+	            </div>
+	            <div class="input-field col s8">  
+	                <input ng-model="pass" id="pass" type="password" class="validate" value="" placeholder="*********">
+	                <label class="active" for="pass">Contraseña:</label>
+	            </div>
+	    	</div>
+	    			    <div class="row col s12">
+	
+			<a class="waves-effect waves-light btn orange darken-4" ng-click="submit()">Guardar</a>
+		</div>
+	    </div>
+    </div>
+</div>
+

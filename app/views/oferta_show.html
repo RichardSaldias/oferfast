@@ -48,22 +48,53 @@
 	        	</div> 
  			</div>
  			<div class="col s12">
- 				<p style="text-align: justify">{{ofertaOnly.description}}. <a href="">#Platano</a><a href=""> #Pajaritos</a><a href=""> #Maipú</a><a href=""> #Fruta</a></p>
-
-
+ 				<p style="text-align: justify">{{ofertaOnly.description}}.
+	 				<b ng-repeat="a in etiquetas" class="chip">
+					 	<a href="">#{{a.name}}</a>
+					</b>
+				</p>
  			</div>
-	        <div class="col s12" style="padding-top:10px;">
-				<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()">Volver</div>
+		</div>
+
+		<div ng-repeat="a in comentarios">
+			<div class="card-panel blue-grey darken-1" style="color:white">
+			  <h5 class="header"><b>{{a.usuario.username}}</b></h5>
+			  <p align="justify">{{a.text}}</p>
 			</div>
 		</div>
+
+		<div class="card-panel blue-grey darken-4" style="color:white">
+		  Comenta:
+		  <div class="card-panel blue-grey lighten-5" style="color:Black">
+
+		    <div class="row">
+		      <form class="col s12">
+		        <div class="row">
+		          <div class="input-field col s12">
+		            <textarea ng-model="comentar.text" id="cajaComentar" class="materialize-textarea"></textarea>
+		            <label for="cajaComentar"></label>
+		          </div>
+		        </div>
+		         <a class="waves-effect waves-light btn black" ng-click="submit()">Enviar</a>
+		      </form>
+
+		    </div>
+
+		  </div>
+		</div>
+
+	    <div class="col s12" style="padding-top:10px;">
+			<div class="nav-header waves-effect waves-light btn blue-grey darken-4 z-depth-2" ng-click="doTheBack()">Volver</div>
+		</div>
+
 	</div>
 		<div ng-if="ofertaOnly.ofertaId == undefined">
-			<div class="section blue-grey darken-4 z-depth-2" style="color:white;">
-				<h4><b>ACTOR NO ENCONTRADO</h4>
+			<div class="section  red darken-4 z-depth-2 center-align" style="color:white;">
+				<h4><b>ERROR 404 (Not Found)</h4>
 			</div>
 			<div class="divider"></div>
-			<div class="section blue-grey z-depth-2" style="color:white">
-			    <p class="h4">Por favor ingrese un actor válido</p>
+			<div class="section red z-depth-2 center-align" style="color:white">
+			    <p class="h4">Oferta no encontrada</p>
 			</div>
 			<div class="divider"></div>
 			<br>

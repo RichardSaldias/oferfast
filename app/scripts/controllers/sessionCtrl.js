@@ -2,13 +2,13 @@ angular.module('angularSpa')
     .controller('SessionCtrl', function($scope,$cookieStore){
         
         //Obtiene un usuario conectado
-    	$scope.nameUser = $cookieStore.get('usuarioActual');
-		
-        //Elimina la session
-    	$scope.eliminarCookieSesion = function(nameUser){
-    		$cookieStore.remove('usuarioActual')
-    	};
+    	$scope.session = $cookieStore.get('sesion');
 
+        //Elimina la session
+    	$scope.eliminarCookieSesion = function(session){
+    		$cookieStore.remove('sesion')
+    		window.location.reload();
+    	};
 });
 
 

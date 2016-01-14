@@ -27,6 +27,10 @@
             templateUrl: 'views/oferta_edit.html',
             controller: 'OfertaEditCtrl'
           })
+          .when('/usuario/perfil', {
+            templateUrl: 'views/perfilUsuario.html',
+            controller: 'PerfilUsuarioCtrl'
+          })
         .otherwise({
             redirectTo: '/'
           });

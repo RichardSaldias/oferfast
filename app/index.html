@@ -22,17 +22,18 @@
 <body ng-app="angularSpa" ng-controller="SessionCtrl">
 <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">
+      <a href="/#/" class="brand-logo">
         <img class="logo" src="images/log.png" alt="logo">
-        <h4>OferFast! : {{nameUser}}</h4>
+        <h4>OferFast!</h4>
       </a>
        
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#/home">Home</a></li>
         <li><a href="#/ofertas">Mis ofertas</a></li>
         <li><a href="#/buscarOfertaAvanzada">Busqueda avanzada</a></li>
-        <li ng-if="nameUser == undefine"><a href="#/login">Login</a></li>
-        <li ng-if="nameUser != undefine"><a href="#/login" ng-click="eliminarCookieSesion()">Cerrar session</a></li>
+        <li><a href="#/usuario/perfil">{{session.username}}</a></li>
+        <li ng-if="session == undefine"><a href="#/login">Login</a></li>
+        <li ng-if="session != undefine"><a href="#/login" ng-click="eliminarCookieSesion()">Cerrar sesion</a></li>
         <li>
         <form>
             <div class="input-field yellow accent-4">
@@ -42,7 +43,6 @@
             </div>
           </form>
         </li>
-        <!--<li><a href="#/about">Acerca de</a></li>-->
       </ul>
     </div>
 </nav>
@@ -75,6 +75,7 @@
   <script src="scripts/controllers/misOfertasCtrl.js"></script>
   <script src="scripts/controllers/ofertaEditCtrl.js"></script>
   <script src="scripts/controllers/ofertaShowCtrl.js"></script>
+  <script src="scripts/controllers/perfilUsuarioCtrl.js"></script>
   <script src="scripts/controllers/sessionCtrl.js"></script>
   <script src="scripts/services/OfertasSrv.js"></script>
   <!-- endinject -->

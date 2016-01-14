@@ -4,13 +4,16 @@
     <h1 class="thin">TODAS LAS OFERTAS</h1>
     <div class="container" style="width:100%;">
 	    <div class="row">
+
+
 			<div ng-repeat="a in ofertas">
+			
 				<div class="col l4 m6 s12">
 	            	<div class="card color-principal">
 	                	<div class="card-image" >
-	                  		<div style="height:0px;margin-bottom:70%"><img class="activator" src="images/platanos.jpg">
+	                  		<div style="height:0px;margin-bottom:70%"><img class="activator" src="/images/platanos.jpg">
 	                  		</div>
-	                  		<span class="card-title activator " style="text-shadow:0px 0px 3px #000; margin-bottom:-70%"><b>{{a.title}}</b></span>
+	                  		<span class="card-title activator" style="text-shadow:0px 0px 3px #000; margin-bottom:-70%"><b>{{a.title}}</b></span>
 	                	</div>
 	               		<div class="card-reveal" style="display: none; transform: translateY(0px);">
 	                  		<span class="card-title grey-text text-darken-4">{{a.title}}<i class="material-icons right">close</i></span>
@@ -19,7 +22,7 @@
 	                	</div>
 	             	</div>
 	       		</div>
-
+			
 			</div>
 		</div>
 	</div>

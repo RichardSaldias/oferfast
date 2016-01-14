@@ -1,24 +1,18 @@
 angular.module('angularSpa')
-    .controller('MisOfertasCtrl', function($scope, ofertasService, $routeParams){
-        $scope.actors = [];
-        function getOfertas(){
-            ofertasService.getOfertas()
+    .controller('MisOfertasCtrl', function($scope, ofertasService, $routeParams,$cookieStore){
+        
+        function getMisOfertas(){
+            $scope.session = $cookieStore.get('sesion');
+            ofertasService.getMisOfertas($scope.session.usuarioId)
             .success(function(data){
                 $scope.ofertas = data;
                 $scope.status = 'Todo funciona bien';
             })
             .error(function(error){
-                $scope.status = 'Error al consultar por actores, "asadmin start-domain" arreglaria el problema';
+                $scope.status = 'Error al consultar';
             });
         }
-        getOfertas();
-        function getOferta(){
-            ofertasService.getOferta($routeParams.id)
-            .success(function(data){
-                $scope.actorOnly = data;
-            });
-        }
-        getOferta();
+        getMisOfertas();
 
         $scope.doTheBack = function() {
         window.history.back();

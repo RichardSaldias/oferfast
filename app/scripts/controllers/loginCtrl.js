@@ -1,29 +1,20 @@
 angular.module('angularSpa')
     .controller('LoginCtrl', function($scope,$location, $cookieStore,$resource,ofertasService){
-    	   
-        /*
-            $scope.submitejemplo = function(){
-	    		var nombre = $scope.username;
-	    		var password = $scope.password;
-	    		if($scope.username == 'admin' && $scope.password=='admin'){
-	    			$location.path('/home');
-	    		}else{
-	    			alert('Usuario o contraseña incorrecta');
-	    		}
-    	};
-    	*/
-        
         // Inicia una session
     	$scope.submit = function(nameUser,passUser){
-    		var nameUser = $scope.username;
-            var passUser = $scope.password;
-    		
               ofertasService.getSesion($scope.username,$scope.password)
             .success(function(data){
                 $scope.SessionOnly = data;
-                console.log( $scope.SessionOnly.username);
-                alert($scope.SessionOnly.username);
-                 $cookieStore.put('usuarioActual',$scope.SessionOnly.username);
+                //console.log( $scope.SessionOnly.username);
+                //alert($scope.SessionOnly.username);
+                if ($scope.SessionOnly.INFO=='Loggeado'){
+                    $cookieStore.put('sesion',$scope.SessionOnly);
+                    $location.url("/home");
+                    window.location.reload();
+                } else {
+                    alert($scope.SessionOnly.INFO);
+                }
+                 
             });
            
 

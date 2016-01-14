@@ -8,12 +8,23 @@ angular.module('angularSpa')
                 $scope.status = 'Todo funciona bien';
             })
             .error(function(error){
-                $scope.status = 'Error al consultar por actores, "asadmin start-domain" arreglaria el problema';
+                $scope.status = 'Error al consultar';
             });
         }
         getOfertas();
-        $scope.name = $cookieStore.get('nombreuser');
-        $scope.mostrarCookieSesion = function(){
-            $window.alert($cookieStore.get('nombreuser'));
-        };
+        $scope.ofertasImg = [];
+        function getImgOfertas(){
+            ofertasService.getImgOfertas()
+            .success(function(data){
+                $scope.ofertasImg = data;
+                $scope.status = 'Todo funciona bien';
+            })
+            .error(function(error){
+                $scope.status = 'Error al consultar';
+            });
+        }
+        getImgOfertas();
+       
+
 });
+

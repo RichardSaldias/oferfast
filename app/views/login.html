@@ -1,15 +1,15 @@
-<h1 class="thin">LOGIN</h1>
+<h1 class="thin">Iniciar Sesión</h1>
 
 <div class="row">
     <div class="col l6 m6 s12">
         <div class="card-panel grey lighten-4">
             <div class="input-field" style"input-focus-color:#ffc107">
-                <input ng-model="username" placeholder="Introduce tu correo" id="correo" type="text" class="validate">
+                <input ng-model="username" placeholder="Usuario" id="username" type="text" class="validate">
             </div>
             <div class="input-field">
-                <input ng-model="password" placeholder="Introduce tu password" id="password" type="password" class="validate">
+                <input ng-model="password" placeholder="Contraseña" id="password" type="password" class="validate">
             </div>
-            <a href="#/home" class="waves-effect waves-light btn amber darken-1" ng-click="submit()">Iniciar sesión</a>
+            <a class="waves-effect waves-light btn amber darken-1" type="submit" name="action" ng-click="submit()">Iniciar sesión</a>
         </div>
     </div>
 </div>
